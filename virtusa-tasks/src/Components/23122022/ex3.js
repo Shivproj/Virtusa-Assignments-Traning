@@ -1,17 +1,17 @@
 import React from "react";
 
-function FormExample() {
+const  FormExample = ()=> {
   const [formState, setFormState] = React.useState({
     name: "",
     age: "",
     gender: "",
   });
 
-  function handleChange(event) {
+  const handleChange = (event) => {
     setFormState({ ...formState, [event.target.name]: event.target.value });
   }
 
-  function handleSubmit(event) {
+  const handleSubmit = (event) => {
     event.preventDefault();
     alert(
       `Name: ${formState.name} Age: ${formState.age} Gender: ${formState.gender}`
@@ -41,11 +41,20 @@ function FormExample() {
       </label>
       <br />
       <label>
-        Gender:
+        Male:
         <input
-          type="text"
+          type="radio"
           name="gender"
-          value={formState.gender}
+          value="Male"
+          onChange={handleChange}
+        />
+      </label>
+      <label>
+        Female:
+        <input
+          type="radio"
+          name="gender"
+          value="Female"
           onChange={handleChange}
         />
       </label>
