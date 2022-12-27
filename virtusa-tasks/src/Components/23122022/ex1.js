@@ -1,4 +1,4 @@
-const EXAMPLE1 = (props) => {
+const Example1 = (props) => {
   console.log(props.gender);
   let today = new Date();
   let date =
@@ -27,4 +27,4 @@ const EXAMPLE1 = (props) => {
   );
 };
 
-export default EXAMPLE1;
+export default Example1;
